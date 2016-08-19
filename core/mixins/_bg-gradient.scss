@@ -1,0 +1,15 @@
+/// Creates simple background-color gradients from top to bottom.
+/// 
+/// @requires Use of the colors map, and the c() function for returning the color values of the map
+/// @see _colors.scss
+/// 
+/// 
+/// @params map-key $top top color
+/// @params map-key $bottom bottom color
+/// @params unit $endpoint point where transition ends
+@mixin bg-gradient($top, $bottom, $endpoint: 40%) {
+	background: c($top);
+    background: -moz-linear-gradient(top, c($top) 0%,  c($bottom) $endpoint);
+    background: -webkit-linear-gradient(top, c($top) 0%, c($bottom) $endpoint);
+    background: linear-gradient(to bottom, c($top) 0%, c($bottom) $endpoint);
+}

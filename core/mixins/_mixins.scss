@@ -1,0 +1,59 @@
+////
+///_________________________ Mixins _________________________ \\
+//
+//General Mixins
+//The various configuration files for the framework
+//@since 1.0.0
+//@author Diego Villaseñor
+
+//_________________________ Index _________________________ \\
+//
+//	Mixins for:
+//		Debugging/Printing Vars
+//		Inserting Content
+//		Objects
+//		Positioning
+//		Responsive
+//		Styling
+//		Transitions
+//
+//
+////
+
+//======== Debugging ========\\
+@import "_maps";//Prints into the console maps registered in the $maps variable.
+
+//======== Importing ========\\
+@import "_exports";// An import once module
+
+//======== Inserting content ========\\
+@import "_delimiter";// Creates css delimiters for breadcrumbs,links, or else.
+
+
+//======== Objects ========\\
+@import "_overlay";// acepta background color y booleana sobre la transición
+
+
+//======== Positioning ========\\
+@import "_position";//XY positioning with translate.
+@import "_center";// XY o Y centering of an element. An improved version of the "position" mixin.
+
+
+//======== Responsive ========\\
+// @import " _between";// @media mixin
+@import "_between";// @media mixin
+@import "_under";// @media mixin
+@import "_over";// @media mixin
+
+
+//======== Stylings ========\\
+@import "_bg-cover";//Sets background cover
+@import "_bg-gradient";//creates top-bottom gradients
+@import "_aspectRatio";//Maintains aspect ratio of an div
+@import "_inputStyling";// Fully style an input with a single line
+@import "_selection";// Fully style an input with a single line
+@import "_selected-link";
+@import "_chiral-even-odd";
+
+//======== Transitions ========\\
+@import "transitions/_hoverTransition";

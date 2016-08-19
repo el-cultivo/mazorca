@@ -1,0 +1,134 @@
+.mediaManila {
+
+  &__img {
+
+    &--boutique {
+      padding-top: 62px;
+    }
+  }
+
+  &__link {
+    @extend %link;
+    margin-right: s(5);
+    padding-top: s();
+    display: block;
+    float: right;
+    clear: both;
+
+    @include under(sm) {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active {
+      color: c(brown);
+    }
+
+    &--email {
+      padding-top: 66px;
+      font-size: 36px;
+      text-transform: none;
+    }
+
+    &--without {
+      margin-right: 0;
+    }
+  }
+
+  &__about {
+    @extend %link-italic;
+    color: c(brown);
+
+    &:after {
+      content: " \0BB \020";
+    }
+  }
+
+  &__paragraph {
+    @extend %paragraph;
+    color: c(brown);
+
+    p {
+      margin-bottom: 0;
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    a {
+      @extend %link;
+      color: c(brown);
+      font-size: 22px;
+      text-transform: none;
+    }
+
+    li:before {
+      content: "\002D";
+    }
+
+  }
+
+  &__paragraph-small {
+    @extend %paragraph-small;
+    margin-bottom: 97px;
+
+    @include under(md) {
+      margin-bottom: s(5);
+    }
+
+    @include under(xs) {
+      text-align: justify;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    a {
+      @extend %link;
+      font-size: 15px;
+      text-transform: none;
+    }
+
+    li:before {
+      content: "\002D";
+    }
+  }
+
+  &__address {
+    @extend %title;
+    margin-bottom: 47px;
+    line-height: 21px;
+    text-align: right;
+
+    @include under(xs) {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mb80 {
+    margin-bottom: s(8);
+
+    @include under(md) {
+      margin-bottom: s(5);
+    }
+  }
+
+  &__mb100 {
+    margin-bottom: s(10);
+
+    @include under(md) {
+      margin-bottom: s(5);
+    }
+  }
+
+}

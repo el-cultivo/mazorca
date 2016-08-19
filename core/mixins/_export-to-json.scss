@@ -1,0 +1,73 @@
+///  Description Private mixin used by export-to-json, to export a single a map.
+///  @access private
+///  @alias export-to-json
+///  @group JS
+///  @since 0.0.1
+@mixin map-to-json($maps, $map_names) {
+   $json: ();
+    $data:();
+    $obj: ();
+    
+    @each $key, $value in $maps {
+      $value: strip-unit($value);
+      $elem: '"#{$key}" : "#{$value}"';
+      $data: append($data, $elem, comma);
+    }
+    
+    $obj : '#{$map_names}: {#{$data}}';
+    $json: append($json, $obj, comma);
+  
+  body::before {
+    content: '{#{$json}}';
+    display:none;
+  } 
+}
+
+///  Description Private mixin used by export-to-json used to export a list of maps.
+///  
+///  @access private
+///  @alias export-to-json
+///  @group JS
+///  @since 0.0.1
+@mixin maps-to-json($maps, $map_names) {
+  @if length($maps) != length($map_names) {@error "Mixin export-to-json, expects the $maps list lenght to match the $map-names list length."}
+  $json: ();
+  $i:0;
+  
+  @while $i<length($maps) {
+    $elem:'';
+    $data:();
+    $obj: ();
+    @each $key, $value in nth($maps, $i+1) {
+      $value: strip-unit($value);
+      $elem: '"#{$key}" : "#{$value}"';
+      $data: append($data, $elem, comma);
+    }
+    $obj : '#{nth($map_names, $i+1)}: {#{$data}}';
+    $json: append($json, $obj, comma);
+    $i: $i + 1;
+  }
+  body::before {
+    content: '{#{$json}}';
+    display:none;
+  } 
+}
+
+
+///  Description Exports a map or a list or a list of maps into JSON and attached them to the body, via body::before->content.
+///  @requires JS function to retireve the exported JSON
+///  @group export-to-json
+///  
+///  @param {map | list} $maps - A map or a list of maps.
+///  @param {string} $map_names - A string, or a list of strings, with name(s) of the map(s) which will be used as the property for the JSON object.
+///  
+///  @returns {string} Formated as JSON and attached to the body::before via te content property.
+///  @since 0.0.1
+@mixin export-to-json($maps, $map_names) {
+  @if type-of($maps) == 'list' {
+     @include maps-to-json($maps, $map_names)
+  }
+  @else if type-of($maps) == 'map' {
+    @include map-to-json($maps, $map_names)
+  }
+}

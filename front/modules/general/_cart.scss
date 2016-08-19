@@ -1,0 +1,384 @@
+.cart {
+
+  &__ttl {
+    @extend %title;
+    margin-bottom: s(5);
+    display: block;
+    text-align: right;
+
+    @include under(xs) {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    &--paypal {
+      padding-top: 0;
+      margin-bottom: s(5/2);
+
+      &-default {
+        margin-bottom: s(4);
+
+        @include under(xs) {
+          margin-bottom: s(3);
+        }
+      }
+    }
+
+    &--confirmation {
+      padding-top: 147px;
+
+      @include under(sm) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__ttl-order {
+    @extend %title;
+    display: block;
+    line-height: lh(sm);
+
+    &--info {
+        font-family: f(inputs);
+        font-size: 11px;
+    }
+  }
+
+  &__number-order {
+      text-decoration: underline;
+  }
+
+  &__box {
+    margin-top: s(5);
+
+    &--order {
+        margin-top: s(10);
+
+        @include under(xs) {
+            margin-top: 50px;
+        }
+    }
+  }
+
+  &__item-container{
+    margin-top: 88px;
+    margin-bottom: s(5);
+
+    @include under(xs) {
+      margin-top: 35px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__clothing-container {
+    width: 100%;
+    margin-bottom: 57px;
+
+    @include under(md) {
+      margin-bottom: s(13);
+    }
+
+    @include under(xs) {
+      margin-bottom: 0;
+    }
+
+    &--shop {
+      margin-bottom: s(5/2);
+    }
+  }
+
+  &__clothing-container,
+  &__clothing-name,
+  &__clothing-description,
+  &__price {
+    display: block;
+    float: right;
+    clear: both;
+
+    @include under(md) {
+      float: left;
+    }
+  }
+
+  &__clothing-name {
+    @extend %caption;
+    font-size: 12px;
+    line-height: lh(sm);
+  }
+
+  &__clothing-description{
+    @extend %caption-description;
+    line-height: lh(sm);
+  }
+
+  &__price {
+    @extend %number;
+    line-height: lh(md);
+  }
+
+  &__img {
+    width: 100px;
+    position: absolute;
+    right: -150px;
+
+    @include under(md) {
+      right: 0;
+    }
+
+    @include under(xs) {
+      position: relative;
+      top: -34px;
+      float: right;
+      clear: both;
+    }
+
+  }
+
+  &__greeting-container {
+    margin-bottom: s(7);
+
+    @include under(xs) {
+      text-align: center;
+    }
+
+    &--whishlist {
+        margin-bottom: 0;
+
+        @include under(xs) { //provicional, hasta que este modulo se encuentre en la parte de arriba
+            margin-top: s(5);
+        }
+    }
+
+    &--shipping {
+      margin-bottom: s(4);
+    }
+
+    &--thanks {
+      margin-bottom: s(5);
+    }
+  }
+
+  &__greeting {
+    @extend %title;
+    display: block;
+    line-height: lh(sm);
+  }
+
+  &__username {
+    @extend %title;
+    font-size: 11px;
+    font-weight: 200;
+    line-height: lh(md);
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__paragraph {
+    @extend %paragraph-small;
+
+    &--item-info {
+        padding-top: 5px;
+    }
+  }
+
+  &__bill-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: s(5);
+
+    &--shop {
+      padding-top: 39px;
+    }
+  }
+
+  &__bill,
+  &__amount {
+    display: block;
+    line-height: 23px;
+  }
+
+  &__bill {
+    @extend %title-bill;
+  }
+
+  &__amount {
+    @extend %number;
+    float: right;
+    clear: both;
+
+    &--total {
+      font-weight:normal;
+    }
+  }
+
+  &__order-container {
+    margin-bottom: s(4);
+
+    &--whishlist {
+        margin-top: 25px;
+        text-align: right;
+    }
+
+    @include under(xs) {
+        margin-bottom: 27px;
+        text-align: center;
+    }
+  }
+
+  &__label-container {
+    margin-bottom: s(10) !important;
+    padding-top: s(10);
+
+    @include under(xs) {
+      margin-bottom: s(5) !important;
+      padding-top: s(5);
+      display: block;
+      text-align: center;
+    }
+
+    &--invoice {
+      margin-bottom: s(5) !important;
+    }
+  }
+
+  &__label {
+    @extend %label-light;
+    padding-top: 3px;
+    padding-left: s();
+    display: inline-block;
+    line-height: lh(md);
+  }
+
+  &__label-invoice {
+    @extend %label;
+    padding-top: 7px;
+    padding-left: s();
+    display: inline-block;
+  }
+
+  &__link {
+    @extend %link-form;
+
+    &--other {
+      display: block;
+      padding-top: 27px;
+    }
+
+    &--delete {
+        @extend %link-italic;
+        display: block;
+        padding-top: 25px;
+        text-align: right;
+
+        @include under(xs) {
+            text-align: center;
+        }
+    }
+  }
+
+  &__icon-visa {
+    width: 80px;
+    margin: 0 auto;
+    background-color: c(dark);
+  }
+
+  &__icon-paypal {
+    width: 67px;
+    margin: 0 auto;
+    background-color: c(dark);
+  }
+
+  &__icon-link {
+    width: 190px;
+    height: 30px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: f(sans);
+    font-size: 13px;
+    font-weight: bold;
+    color: c(white);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: c(dark);
+    display: inline-block;
+
+    &--txt {
+      padding-top: 9px;
+    }
+
+    &:hover img {
+      background-color: c(beige);
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+    padding-top: 64px;
+    display: flex;
+    justify-content: space-between;
+
+    @include under(bag) {
+      flex-direction: column;
+    }
+
+    @include under(sm) {
+      flex-direction: initial;
+      justify-content: flex-start;
+    }
+
+    @include under(xs) {
+      flex-direction: column;
+    }
+
+    &--shopping {
+      padding-top: 64px;
+    }
+
+    &--icon {
+      padding-top: 0;
+    }
+
+    &--half {
+        justify-content: flex-end;
+    }
+
+  }
+
+  &__btn {
+    @extend %button;
+    width: inherit !important;
+
+    &:first-child {
+      margin-right: s();
+    }
+
+    @include under(bag) {
+
+      &:first-child {
+        margin-bottom: s(3);
+      }
+    }
+
+    @include under(xs) {
+      width: 100% !important;
+
+      &:first-child {
+        margin-bottom: 27px;
+      }
+    }
+
+    &--half {
+        width: 50% !important;
+
+        &:first-child{
+            margin-right: 0;
+        }
+
+        @include under(xs) {
+            width: 100% !important;
+        }
+    }
+  }
+
+}

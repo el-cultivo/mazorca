@@ -1,0 +1,37 @@
+.mediaPopUp {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+
+  &__content {
+    background-color: c(white);
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 900px;
+    padding-top: s(5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: s(8);
+  }
+
+  &__close {
+    position: fixed;
+    font-family: f(inputs);
+    font-style: italic;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: c();
+    float: right;
+    cursor: pointer;
+  }
+}

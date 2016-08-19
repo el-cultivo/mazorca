@@ -1,0 +1,8 @@
+@mixin chiralOddEven($prop, $val){
+    &:nth-child(odd) {
+        #{$prop}-right: $val;
+    }
+    &:nth-child(even) {
+        #{$prop}-left: $val;
+    }
+}

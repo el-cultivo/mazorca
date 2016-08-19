@@ -1,0 +1,189 @@
+.mediaCollection {
+
+  &__ttl {
+    @extend %title;
+    margin-left: s(10);
+    display: block;
+    position: relative;
+    top: 19px;
+    line-height: lh(sm);
+
+    @include under(md) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+
+    &--2 {
+      margin-right: s(5);
+      margin-bottom: s(8);
+      margin-left: 0;
+      padding-top: s();
+      position: initial;
+      text-align: right;
+      float: right;
+      clear: both;
+
+      @include under(xs) {
+        margin-right: 0;
+      }
+    }
+
+    &--3 {
+      position: initial;
+      margin-bottom: s();
+    }
+
+    &--img {
+      @extend %title-img;
+    }
+  }
+
+  &__img {
+    padding-top: s(8);
+    @include under(sm) {
+      padding-top: 0;
+    }
+
+    &--lookbook {
+      margin-bottom: s(5);
+    }
+  }
+
+  &__link {
+    @extend %link;
+    display: block;
+    margin-right: s(5);
+    margin-bottom: s(8);
+    padding-top: s();
+    float: right;
+    clear: both;
+
+    @include under(xs) {
+      margin-right: 0;
+    }
+
+    &--2 {
+      margin-bottom: s(6);
+      margin-right: 0;
+    }
+  }
+
+  &__link-lookbook {
+    @extend %link-hover;
+    @include delimiter('|', 6px, 0px);
+    display: inline-block;
+  }
+
+  &__m50 {
+    @include under(sm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__caption {
+      @extend %caption;
+      float: right;
+      clear: both;
+      line-height: lh(sm);
+
+      &--description {
+          @extend %caption-description;
+      }
+  }
+
+  &__price {
+      @extend %number;
+      line-height: lh(md);
+      &--container {
+          width: auto;
+          position: relative;
+          float: right;
+          clear: both;
+      }
+
+      &--discounted {
+          @extend %number-gold;
+      }
+
+      &--discountee {
+          text-decoration: line-through;
+      }
+  }
+
+// Hover on collections and lookbook
+
+  &__info {
+
+    &-collection {
+      position: absolute;
+      top: 65%;
+      left: calc(100% - 54px);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    &-lookbook {
+      width: 50%;
+      position: absolute;
+      top: 65%;
+      left: calc(100% - 114px);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    &:hover {
+      .mediaCollection__info-collection,
+      .mediaCollection__info-lookbook {
+          opacity: 1;
+          @include under(md) {
+            opacity: 0;
+          }
+      }
+    }
+  }
+
+// Hover on stock
+
+  &__transition {
+      margin-bottom: s(5);
+
+      &-img-show {
+        display: block;
+      }
+
+      &-img-hide {
+        display: none;
+      }
+
+      &-hide {
+          transition: opacity 0.5s ease;
+          opacity: 0;
+          margin-right: s(5);
+          @include under(md) {
+              opacity: 1;
+          }
+      }
+
+      &:hover {
+          .mediaCollection__transition-hide {
+              opacity: 1;
+          }
+
+          .mediaCollection__transition-img-show {
+              display: none;
+              @include under(md) {
+                display: block;
+              }
+          }
+
+          .mediaCollection__transition-img-hide {
+              display: block;
+              @include under(md) {
+                display: none;
+              }
+          }
+      }
+  }
+}

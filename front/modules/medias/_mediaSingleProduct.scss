@@ -1,0 +1,96 @@
+.mediaSingleProduct {
+
+   	&__img {
+   		width: 400px;
+      margin-bottom: s(5);
+
+      @include under(sm)  {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &--responsive {
+        display: none;
+        @include under(sm) {
+          display: block;
+        }
+      }
+
+      &--1 {
+        @include under(sm) {
+          display: none;
+        }
+      }
+
+      &--2 {
+        @include under(sm) {
+          padding-top: s(12);
+        }
+      }
+   	}
+
+    &__container {
+      @include clearfix;
+    }
+
+   	&__caption {
+      @extend %caption;
+      float: right;
+      font-size: 12px;
+      line-height: lh(sm);
+    }
+
+    &__price {
+        @extend %number;
+        line-height: lh(md);
+        float: right;
+
+        &--container {
+          width: 100%;
+          // position: relative;
+          margin-bottom: s(5);
+          clear: both;
+        }
+
+        &--discounted {
+            @extend %number-gold;
+        }
+
+        &--discountee {
+            text-decoration: line-through;
+            margin-right: 6px;
+        }
+    }
+
+    &__description {
+    	@extend %paragraph-small;
+    	float: left;;
+      margin-bottom: s(3);
+
+      &--list {
+        margin-bottom: s(9/2);
+      }
+    }
+
+    &__btn-add,
+    &__btn-save {
+      @extend %button;
+      width: 190px !important;
+      @include under(xs) {
+        position: relative;
+        width: 100% !important;
+      }
+    }
+
+    &__btn-add {
+      @include under(xs) {
+        bottom: -122px;
+      }
+    }
+
+    &__btn-save {
+      @include under(xs) {
+        bottom: -85px;
+      }
+    }
+}

@@ -1,0 +1,34 @@
+.menuAbout {
+  @include pageMenuComponent(200px);
+
+  &__link-container {
+
+    @include under(sm) {
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: 0;
+      padding-right: s(5);
+    }
+
+    @include under(xs) {
+      display: block;
+      margin: auto;
+      margin-bottom: s(3);
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+
+    @include under(sm) {
+      @include delimiter('', 0, 0);
+      line-height: lh(md);
+    }
+
+    @include under(xs) {
+      @include delimiter('|', 10px, 0);
+      line-height: lh(md);
+    }
+  }
+}

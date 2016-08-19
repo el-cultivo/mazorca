@@ -1,0 +1,15 @@
+%option {
+  cursor: pointer;
+  font-family: f(sans);
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  color: c(dark);
+  &:hover,
+  &:active { color: c(brown);}
+
+  @include under(md) {
+    font-size: 10px;
+  }
+}

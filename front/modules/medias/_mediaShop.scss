@@ -1,0 +1,32 @@
+.mediaShop {
+
+    &__link {
+        @extend %link;
+
+        &--container {
+            width: 100%;
+            margin-right: s(5);
+            margin-bottom: s(8);
+            padding-top: s();
+            float: right;
+        }
+
+        &--man {
+            margin-left: 43%;
+            position: absolute;
+        }
+
+        &--woman {
+            float: right;
+        }
+
+        &--apartado {
+            float: right;
+            margin-right: s(5);
+            padding-top: s();
+            @include under(sm) {
+                margin-bottom: s(5);
+            }
+        }
+    }
+}

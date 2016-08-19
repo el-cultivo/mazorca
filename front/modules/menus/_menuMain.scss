@@ -1,0 +1,41 @@
+.menuMain {
+
+	position: fixed;
+	top: s(1, header) + s(1, body);
+	z-index: z(menuMain);
+
+	@include under(sm) {
+		display: none;
+	}
+
+	&__container {
+		flex-direction: column;
+	}
+	&__icon {
+		@extend %link-italic;
+		display: inline-block;
+		letter-spacing: 30px;
+		transform: rotate(-90deg);
+		position: absolute;
+		left: -62px;
+		top: 46px;
+		@include over(b(lg) + 54px) {
+			left: -112px;
+		}
+	}
+
+	&__link {
+		@extend %link-menu;
+		@include selected-link(c(ocher)) {
+			font-weight: normal;
+		}
+		
+		font-family: f(sans);
+		display: block;
+		margin-bottom: 24px;
+		position:relative;
+		&:hover {
+			font-weight: normal;
+		}
+	}
+}

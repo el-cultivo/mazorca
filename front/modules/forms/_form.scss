@@ -1,0 +1,128 @@
+.form {
+
+    &__container {
+
+      &--new {
+        @include under(sm) {
+          padding-top: s(5);
+        }
+      }
+
+      @include under(sm) {
+        width: calc(50% + 100px);
+        display: block;
+      }
+
+      @include under(xs) {
+        width: 100%;
+      }
+
+    }
+
+    &__confirmation {
+      padding-top: 205px;
+
+      @include under(sm) {
+        padding-top: 62px;
+        padding-bottom: s(5);
+      }
+    }
+
+    &__ttl {
+      @extend %title;
+      float: right;
+      clear: both;
+      margin-bottom: 40px;
+    }
+
+    &__txt {
+      @extend %paragraph-small;
+      margin-bottom: s(5/2);
+      padding-top: 56px;
+
+      @include under(crunch) {
+        padding-top: 36px;
+      }
+
+      &--account {
+        margin-bottom: 79px;
+        padding-top: 0;
+
+        @include under(sm) {
+          margin-bottom: 59px;
+        }
+      }
+    }
+
+    &__link {
+      @extend %link-form;
+      display: block;
+      margin-bottom: 46px;
+      padding-top: 34px;
+      cursor: pointer;
+    }
+
+    &__input {
+      @extend %input;
+      display: block;
+
+      @include under(xs) {
+        text-align: center;
+      }
+
+      &--first {
+        margin-top: 46px;
+      }
+
+      &--last {
+        margin-bottom: s(5);
+      }
+
+      &--last-invoice {
+        margin-bottom: s(10);
+      }
+
+      &--confirmation {
+        padding-bottom: 4px;
+        margin-bottom: s(5/2);
+      }
+    }
+
+    &__btn {
+      @extend %button;
+      width: 190px !important;
+
+      &--reset {
+        width: 220px !important;
+        padding-right: s();
+      }
+
+      @include under(xs) {
+        width: 100% !important;
+      }
+    }
+
+    &__icon-link {
+      width: 190px;
+      height: 30px;
+      padding-top: 8px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-family: f(sans);
+      font-size: 13px;
+      font-weight: bold;
+      color: c(white);
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: c(dark);
+      display: inline-block;
+
+      &--txt {
+        padding-top: 9px;
+      }
+
+      &:hover img {
+        background-color: c(beige);
+      }
+    }
+}

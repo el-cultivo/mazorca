@@ -1,0 +1,26 @@
+.menuFooter {
+	display: flex;
+	justify-content: space-between;
+	@include under(xs) {
+		display: block;
+		text-align: center;
+	}
+	&__link {
+		@extend %link-footer;
+		margin-right: 28px; //se agrega porque se quito twitter temporalmente
+
+		@include under(xs) {
+			@include delimiter('|', 10px, 0px);
+			margin-right: 0;
+			line-height: lh(md);
+		}
+
+		@include under(xs) {
+			margin-bottom: s(2);
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

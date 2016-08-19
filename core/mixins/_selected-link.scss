@@ -1,0 +1,7 @@
+@mixin selected-link($color: '', $decoration: '') {
+    &.selected {
+        color: $color;
+        text-decoration: $decoration;
+        @content;
+    }
+}

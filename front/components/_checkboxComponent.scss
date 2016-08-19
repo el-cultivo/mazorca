@@ -1,0 +1,47 @@
+@mixin checkboxComponent {
+
+  &__checkbox:not(:checked),
+  &__checkbox:checked {
+    display: none;
+  }
+
+  &__checkbox:not(:checked) + &__cross,
+  &__checkbox:checked + &__cross {
+    cursor: pointer;
+  }
+
+  &__checkbox:not(:checked) + &__cross:before,
+  &__checkbox:checked + &__cross:before {
+    width: 15px;
+    height: 15px;
+    content: '';
+    position: absolute;
+    left:0;
+    top: 104px;
+    border: 1px solid c();
+  }
+
+  &__checkbox:not(:checked) + &__cross:after,
+  &__checkbox:checked + &__cross:after {
+    content: '\0058';
+    position: absolute;
+    top: 108px;
+    left: 6px;
+    font-family: f(sans);
+    font-size: 8px;
+    color: c();
+    line-height: 9.6px;
+    transition: all .2s;
+  }
+
+  &__checkbox:not(:checked) + &__cross:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &__checkbox:checked + &__cross:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}

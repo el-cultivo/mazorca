@@ -1,0 +1,125 @@
+//_________________________ Helpers _________________________ \\
+
+/**
+ * All helpers use the !important keyword, if ever necessary their
+ * output might be overriden with the !important keyword in a
+ * property located lower in the cascade.
+ *
+ */
+
+/**
+ *	Helpers Index:
+ *		Position
+ *		Display
+ *		Gutters
+ *		Paddings and Margins
+ *		JS Classes
+ *
+ */
+
+
+/*************************** Position ***************************/
+
+.absolute {position: absolute !important;}
+.relative {position: relative !important;}
+.fixed, %fixed  {//usar por ejemplo para un menu flotante
+					position:fixed !important;
+				 	max-width: 100% !important;
+					width: 100% !important;
+					left:0;
+				}
+
+.leer-mas { //usar con el JS de cltvo.leerMas
+	&__container {
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.fixed-desktop 	{	@include over(medio) {
+						position:fixed !important;
+					 	max-width: 100% !important;
+					 	width: 100% !important;
+						left:0;
+					}
+				}
+
+
+.flip {
+	-moz-transform:rotate(180deg) !important;
+   -o-transform: rotate(180deg) !important;
+   -webkit-transform: rotate(180deg) !important;
+   transform: rotate(180deg) !important;
+}
+
+.centerXY {	@include center('xy');}
+
+.left 			{ float:left !important;}
+.right 			{ float:right !important;}
+// .top 			{ top:0 !important;}
+.top56 			{ top:56px; }
+.ontop 			{ z-index:99 !important;}
+.z-0 			{ z-index: 0 !important;}
+
+/*************************** Layout ***************************/
+.clearfix {@include clearfix;}
+
+/*************************** Display ***************************/
+.d-bl 			{ display:block !important;}
+.inline		 	{ display: inline !important;}
+.inline-block	{ display: inline-block !important;}
+
+/*************************** Gutters ***************************/
+@if function-exists(s) and type-of($pads) == 'map' {
+
+.gutter-r 		{ padding-right: s(1/2, pr) !important;	}
+.gutter-l 		{ padding-left: s(1/2, pl) !important;	}
+.gutter-rl 		{ padding: 0 s(1/2) !important;	}
+}
+
+
+/*************************** Paddings and Margins ***************************/
+.p0 			{ padding: 0 !important;}
+.pr0 			{ padding-right: 0 !important;}
+.pl0 			{ padding-left: 0 !important;}
+.m0 			{ margin:0 !important;}
+.mb0			{ margin-bottom: 0 !important;}
+.m50			{ margin-bottom: 50px !important;}
+
+
+/*************************** Arrows ***************************/
+.icon-arrow-up    { &:after { content: '\e801'; } }
+.icon-arrow-down  { &:after { content: '\e800'; } }
+
+/*************************** Drags, Selects ***************************/
+%undraggable,
+.undraggable-unselectable {//unselectable needs to be present so that undraggable works properly
+	user-drag: none !important; 
+	-webkit-user-drag: none !important;
+	user-select: none !important;
+	-moz-user-select: none !important;
+	-webkit-user-select: none !important;
+	-ms-user-select: none !important;
+}
+
+.unselectable {
+	user-select: none !important;
+	-moz-user-select: none !important;
+	-webkit-user-select: none !important;
+	-ms-user-select: none !important;
+}
+
+.undraggable-unselectable-cascading {
+	& * {
+		@extend %undraggable;
+	}
+}
+
+
+/*************************** Animations ***************************/
+.transition-fast {transition: all 0.3s}
+.transition-slow {transition: all 0.7s}
+.hover-scale-up {&:hover { transform: scale(1.2) !important;}}
+
+/*************************** JS Classes ***************************/
+.noScroll_JS 	{ overflow:hidden !important;} //add on body through JS to prevent scrolling when using a full hright fixed overlay

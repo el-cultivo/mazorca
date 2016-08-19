@@ -1,0 +1,28 @@
+.menuTerms {
+  @include pageMenuComponent(910px);
+
+    &__link-container {
+
+      margin-bottom: s(4);
+      padding-right: 15px;
+
+      @include under(md) {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: s(3);
+        display: block;
+        text-align: center;
+      }
+
+      @include under(xs) {
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+
+      @include under(md) {
+        @include delimiter('|', 10px, 0px);
+      }
+    }
+}
