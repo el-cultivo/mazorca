@@ -1,10 +1,6 @@
 $ cat .gitignore
 *.DS_Store
 /node_modules/
-package.json
-webpack.config.js
-gulpfile.js
-.babelrc
 /vendor/
 compiled.css
 compiled.css.map
