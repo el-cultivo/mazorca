@@ -1,0 +1,14 @@
+///
+/// Simple hover transtion
+///
+/// 
+/// @param  {String} $property color or background-color
+/// @author Diego Villaseñor
+/// @since 1.0.0
+///
+
+@mixin hoverTransition($property, $initialColor, $finalColor){
+	#{$property}: $initialColor;
+    transition: $property .5s ease-out;
+    &:hover {#{$property}: $finalColor;}
+}

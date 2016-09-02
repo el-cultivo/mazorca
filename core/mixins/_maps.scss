@@ -5,10 +5,8 @@
 /// 
 /// @see $maps
 /// @group debug
-/// 
+/// @author Diego Villaseñor
 /// @since 0.0.1
-/// 
-/// @return {string} 
 @mixin maps($map-list:()){
 	$ran: false;
 	//print all maps in $maps

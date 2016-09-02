@@ -1,3 +1,13 @@
+///
+/// Adds background cover with a custom position.
+///
+/// 
+/// @param  {String} position
+/// @author Diego Villaseñor
+/// @since 1.0.0
+/// @content 
+////
+
 @mixin bg-cover($position:center){
 	background-size: cover;
 	-webkit-background-size: cover;

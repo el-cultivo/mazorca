@@ -3,32 +3,20 @@
 
 //===Core===//
 @import "core/functions/_functions";
-@import "core/mixins/preConfigMixins/_preConfigMixins";
+@import "core/mixins/preconfig-mixins/_preconfig-mixins";
 @import "core/mixins/_mixins";//
-@import "core/base/_base";
 
 //===Configs===//
-@import "config-mazorca/config/_config";
-@import "front/_cltvo-bootstrap_variables.scss";
+@import "config/_config";
 
-//===Vendor===//
-	//Css begins compling here
-	@import "vendor/bootstrap/_bootstrap.scss";
-	// body {background-color: transparent;}//scafolding de bootstrap, yuk!
-
-	.form-control {
-		padding: 0;
-	}
-
-	p {
-		margin: 0;
-	}
+//===Vendor===//Css begins compling here
+	// @import "vendor/bootstrap/_bootstrap.scss";
 
 //===Mazorca===//
 @import "core/helpers/_helpers";//
 @import "core/debug/_debug";//
 
-@import "front/_elements";
-@import "front/_grid";//
-@import "front/_components";
-@import "front/_modules";
+// @import "front/_elements";
+// @import "front/_grid";//
+// @import "front/_components";
+// @import "front/_modules";

@@ -41,7 +41,7 @@ input, textarea{
 	border: 1px $border_type $border_color;
     border-radius: $border_radius;
 	padding: 0 .5em;
-    @include customAppearance($inputAppearance);
+    @include custom-appearance($inputAppearance);
 }
 
 input, textarea { width: 100%;}
@@ -83,7 +83,7 @@ input[type="radio"]{border-radius: 100%;}
 
 
 select {
-    @include customAppearance($selectAppearance);
+    @include custom-appearance($selectAppearance);
     cursor: pointer;
 }
 

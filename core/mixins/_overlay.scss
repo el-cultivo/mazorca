@@ -1,3 +1,13 @@
+///
+/// Creates an overlay the fills it's container div and applies an opacity transition on hover.
+/// Usefull for positioning things on top of an image.
+///
+/// @param {String} $backGroundColor transparent or an rgba color is recomended
+/// @param {Boolean} $transitionOnHover 
+/// @author Diego Villaseñor
+/// @since 1.0.0
+////
+
 @mixin overlay($backGroundColor, $transitionOnHover){
     display: block;
     position:absolute;

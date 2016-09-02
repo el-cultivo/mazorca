@@ -1,7 +1,0 @@
-//_________________________ Wrapper Functions _________________________ \\
-
-
-/// Simple functions that wrap other more verbose expresions.
-/// This functions make use of variables, maps, lists, etc that are defined in the config file.
-
-@import "_map-get-break"; // b($break).  is a wrapper function to get a break

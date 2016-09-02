@@ -1,24 +1,21 @@
-////
-///_________________________ Mixins _________________________ \\
-//
-//General Mixins
-//The various configuration files for the framework
-//@since 1.0.0
-//@author Diego Villaseñor
 
-//_________________________ Index _________________________ \\
-//
-//	Mixins for:
-//		Debugging/Printing Vars
-//		Inserting Content
-//		Objects
-//		Positioning
-//		Responsive
-//		Styling
-//		Transitions
-//
-//
-////
+//// _________________________ Mixins _________________________ \\
+//// General Mixins
+//// The various configuration files for the framework
+//// @since 1.0.0
+//// @author Diego Villaseñor
+//// _________________________ Index _________________________ \\
+//// 	Mixins for:
+//// 		Debugging/Printing Vars
+//// 		Inserting Content
+//// 		Objects
+//// 		Positioning
+//// 		Responsive
+//// 		Styling
+//// 		Transitions
+
+
+
 
 //======== Debugging ========\\
 @import "_maps";//Prints into the console maps registered in the $maps variable.
@@ -35,7 +32,6 @@
 
 
 //======== Positioning ========\\
-@import "_position";//XY positioning with translate.
 @import "_center";// XY o Y centering of an element. An improved version of the "position" mixin.
 
 
@@ -49,11 +45,10 @@
 //======== Stylings ========\\
 @import "_bg-cover";//Sets background cover
 @import "_bg-gradient";//creates top-bottom gradients
-@import "_aspectRatio";//Maintains aspect ratio of an div
-@import "_inputStyling";// Fully style an input with a single line
+@import "_aspect-ratio";//Maintains aspect ratio of an div
+@import "_input-styling";// Fully style an input with a single line
 @import "_selection";// Fully style an input with a single line
 @import "_selected-link";
-@import "_chiral-even-odd";
 
 //======== Transitions ========\\
-@import "transitions/_hoverTransition";
+@import "transitions/_hover-transition";

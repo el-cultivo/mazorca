@@ -56,7 +56,7 @@
 
 %input-footer {
     // @extend %input-type;
-    @include inputStyling(c(base), c(light), 0, none, transparent, 0, 7px, 7px, 368px);
+    @include input-styling(c(base), c(light), 0, none, transparent, 0, 7px, 7px, 368px);
     height: 23px;
     font-family: f(sans);
     font-size: 14px;

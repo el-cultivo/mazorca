@@ -1,9 +1,8 @@
 ///  Description Private mixin used by export-to-json, to export a single a map.
 ///  @access private
-///  @alias export-to-json
 ///  @group JS
-///  @since 0.0.1
-@mixin map-to-json($maps, $map_names) {
+///  @since 1.0.0
+@mixin _map-to-json($maps, $map_names) {
    $json: ();
     $data:();
     $obj: ();
@@ -26,10 +25,9 @@
 ///  Description Private mixin used by export-to-json used to export a list of maps.
 ///  
 ///  @access private
-///  @alias export-to-json
 ///  @group JS
-///  @since 0.0.1
-@mixin maps-to-json($maps, $map_names) {
+///  @since 1.0.0
+@mixin _maps-to-json($maps, $map_names) {
   @if length($maps) != length($map_names) {@error "Mixin export-to-json, expects the $maps list lenght to match the $map-names list length."}
   $json: ();
   $i:0;
@@ -54,20 +52,17 @@
 }
 
 
-///  Description Exports a map or a list or a list of maps into JSON and attached them to the body, via body::before->content.
-///  @requires JS function to retireve the exported JSON
-///  @group export-to-json
+///  Description Exports a map or a list or a list of maps into JSON and attaches them to the body, via body::before->content.
 ///  
 ///  @param {map | list} $maps - A map or a list of maps.
 ///  @param {string} $map_names - A string, or a list of strings, with name(s) of the map(s) which will be used as the property for the JSON object.
-///  
-///  @returns {string} Formated as JSON and attached to the body::before via te content property.
-///  @since 0.0.1
+///  @group JS
+///  @since 1.0.0
 @mixin export-to-json($maps, $map_names) {
   @if type-of($maps) == 'list' {
-     @include maps-to-json($maps, $map_names)
+     @include _maps-to-json($maps, $map_names)
   }
   @else if type-of($maps) == 'map' {
-    @include map-to-json($maps, $map_names)
+    @include _map-to-json($maps, $map_names)
   }
 }

@@ -1,1 +1,3 @@
-@include maps();
+@if($debug) {
+	@include maps();
+}
