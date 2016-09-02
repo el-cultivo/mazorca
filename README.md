@@ -1,2 +1,2 @@
 # mazorca
-Scss Framework
+Framework de SCSS utilizado por El Cultivo
