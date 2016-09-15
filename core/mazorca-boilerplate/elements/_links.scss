@@ -1,0 +1,70 @@
+%link {
+	color: c();
+	cursor: pointer;
+	font-family: f(sans);
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover,
+	&:active {
+		color: c(gold);
+	}
+}
+
+%link-menu {
+	@extend %link;
+	font-family: f(inputs);
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 200;
+	&:hover,
+	&:active {
+		color: c(ocher);
+	}
+}
+
+%link-user{
+	@extend %link;
+	font-size: 13px;
+}
+
+%link-italic {
+	@extend %link;
+	font-family: f(inputs);
+	font-size: 16px;
+	font-style: italic;
+}
+
+%link-hover {
+  @extend %link;
+	color: c(beige);
+
+  &:hover {
+    color: c();
+  }
+}
+
+%link-form {
+	@extend %link;
+	font-size: 11px;
+	text-transform: none;
+	text-decoration: underline;
+}
+
+%link-italic-footer{
+	@extend %link-italic;
+	font-size: 11px;
+}
+
+%link-footer {
+	@extend %link;
+	font-size: 10px;
+	font-weight: 200;
+
+	&:hover,
+	&:active {
+		color: c(ocher);
+	}
+}

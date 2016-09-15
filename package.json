@@ -1,37 +1,34 @@
 {
-  "name": "wp-content",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "name": "mazorca-core",
+  "version": "1.0.3",
+  "description": "Scss Framework of El Cultivo",
+  "main": "./",
+  "directories": {
+    "docs": "docs"
+  },
   "dependencies": {
-    "gulp": "^3.9.0"
+    "ncp": "^2.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.11.4",
-    "babel-loader": "^6.2.4",
-    "babel-polyfill": "^6.9.1",
-    "babel-preset-es2015": "^6.9.0",
-    "browser-sync": "^2.11.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5",
-    "sassdoc": "^2.1.20",
-    "webpack": "^1.13.1"
+    "mv": "^2.1.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "mazorcamake": "bin/mazorca-make.js",
+    "mazorcainstall": "bin/mazorca-install.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:DiegoVillasenor/gulpfile.git"
+    "url": "git+https://github.com/diegovdc/mazorca.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "SCSS",
+    "framework",
+    "mixins"
+  ],
+  "author": "Diego Villaseñor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegovdc/mazorca/issues"
+  },
+  "homepage": "https://github.com/diegovdc/mazorca#readme"
 }

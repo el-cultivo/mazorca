@@ -1,0 +1,15 @@
+%paragraph {
+    font-family: f(sans);
+    font-size: 22px;
+    font-weight: normal;
+    color: c();
+    line-height: lh(lg);
+}
+
+%paragraph-small {
+    @extend %paragraph;
+    font-size: 15px;
+    font-weight: 200;
+    color: c();
+    line-height: lh(md);
+}
