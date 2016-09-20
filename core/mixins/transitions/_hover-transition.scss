@@ -7,8 +7,8 @@
 /// @since 1.0.0
 ///
 
-@mixin hoverTransition($property, $initialColor, $finalColor){
+@mixin hover-transition($property, $initialColor, $finalColor, $speed: 0.7s){
 	#{$property}: $initialColor;
-    transition: $property .5s ease-out;
+    transition: $property $speed ease-out;
     &:hover {#{$property}: $finalColor;}
 }
