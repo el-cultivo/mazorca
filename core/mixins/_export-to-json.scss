@@ -1,27 +1,3 @@
-///  Description Private mixin used by export-to-json, to export a single a map.
-///  @access private
-///  @group JS
-///  @since 1.0.0
-@mixin _map-to-json($maps, $map_names) {
-   $json: ();
-    $data:();
-    $obj: ();
-    
-    @each $key, $value in $maps {
-      $value: strip-unit($value);
-      $elem: '"#{$key}" : "#{$value}"';
-      $data: append($data, $elem, comma);
-    }
-    
-    $obj : '#{$map_names}: {#{$data}}';
-    $json: append($json, $obj, comma);
-  
-  body::before {
-    content: '{#{$json}}';
-    display:none;
-  } 
-}
-
 ///  Description Private mixin used by export-to-json used to export a list of maps.
 ///  
 ///  @access private
@@ -41,28 +17,37 @@
       $elem: '"#{$key}" : "#{$value}"';
       $data: append($data, $elem, comma);
     }
-    $obj : '#{nth($map_names, $i+1)}: {#{$data}}';
+    $obj : '"#{nth($map_names, $i+1)}": {#{$data}}';
     $json: append($json, $obj, comma);
     $i: $i + 1;
   }
-  body::before {
+  #scss-vars::before {
     content: '{#{$json}}';
-    display:none;
+    font-size: 0;
+    opacity: 0;
   } 
 }
 
 
 ///  Description Exports a map or a list or a list of maps into JSON and attaches them to the body, via body::before->content.
+///  It does not accept nested maps.
+///  IMPORTANT: Requires the use of an element with an id of scss-vars, where the json string will be placed.
+///  Based on the code at: https://css-tricks.com/making-sass-talk-to-javascript-with-json/
 ///  
-///  @param {map | list} $maps - A map or a list of maps.
-///  @param {string} $map_names - A string, or a list of strings, with name(s) of the map(s) which will be used as the property for the JSON object.
+///  @param {map} $maps - A map where keys are the names of the properties and the values are a map for the property. 
+///         I.e. $maps: (  colors: (
+///                                 base:#000, 
+///                                 white: #FFF
+///                              ), 
+///                       breakpoints: (
+///                                 sm: 480px, 
+///                                 md: 1024px
+///                              )
+///                      );
 ///  @group JS
 ///  @since 1.0.0
-@mixin export-to-json($maps, $map_names) {
-  @if type-of($maps) == 'list' {
-     @include _maps-to-json($maps, $map_names)
-  }
-  @else if type-of($maps) == 'map' {
-    @include _map-to-json($maps, $map_names)
-  }
+@mixin export-to-json($maps) {
+  $map_names: map-keys($maps);
+  $list: map-values($maps);
+  @include _maps-to-json($list, $map_names)
 }
