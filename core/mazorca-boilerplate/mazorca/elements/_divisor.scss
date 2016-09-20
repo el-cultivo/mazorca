@@ -1,0 +1,18 @@
+%divisor{
+	width: 100%;
+	padding-top: s(7);
+	border-bottom: 1px solid c();
+
+	// @include under(sm) {
+	// 	padding-top: 22px;
+	// }
+
+}
+
+.divisor { @extend %divisor};
+
+%order-divisor,
+.order-divisor {
+	width: 100%;
+	border-bottom: 1px solid c();
+}

@@ -1,0 +1,26 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+
+@include declara-font-face(DTLNobelT, '../fonts/DTLNobelT', normal);
+@include declara-font-face(DTLNobelT, '../fonts/DTLNobelT-Light', 200);
+@include declara-font-face(DTLNobelT, '../fonts/DTLNobelT-Bold', bold);
+
+@include declara-font-face(Marion, '../fonts/DTLNobelT-Bold', normal, italic);
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+///
+///
+$fonts:(
+		sans:	('Nobel', sans-serif),
+		inputs: ('Marion', serif),
+		serif: 	('Leitura', serif)
+	);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

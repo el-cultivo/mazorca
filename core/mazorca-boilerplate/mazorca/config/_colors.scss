@@ -1,0 +1,20 @@
+$colors: (
+	base:	#14212F,
+	dark:	#0B1119,
+	white:	#FFFFFF,
+	light: 	#F5F3EF,
+	brown: 	#876B3C,
+	dark-brown: #886B3C,
+	ocher:	#4F3A14,
+	gold: 	#876A3B,
+	beige: 	#BAAD99
+	);
+
+@function c($color:base) {
+	@return map-get($colors, $color);
+}
+
+$colorForeground: c();
+$colorBackground: c(white);
+$colorFeatured: c(azul);
+$colorError: #8A1010;

@@ -1,0 +1,27 @@
+%label {
+    font-family: f(sans);
+    font-size: 12px;
+    font-weight: normal;
+    color: c();
+    text-transform: uppercase;
+}
+
+%label-select {
+    @extend %label;
+    font-family: f(inputs);
+    font-size: 16px;
+    font-style: italic;
+}
+
+%label-footer {
+    @extend %title;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+%label-light {
+    @extend %label;
+    font-size: 11px;
+    font-weight: 200;
+    text-transform: none;
+}

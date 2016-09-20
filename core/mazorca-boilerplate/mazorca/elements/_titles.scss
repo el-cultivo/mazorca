@@ -1,0 +1,24 @@
+%title {
+    font-family: f(sans);
+    font-size: 12px;
+    font-weight: normal;
+    color: c();
+    text-transform: uppercase;
+}
+
+%title-description {
+    @extend %title;
+    font-family: f(inputs);
+    font-style: italic;
+}
+
+%title-img {
+  @extend %title;
+  color: c(beige);
+}
+
+%title-bill {
+    @extend %title;
+    font-size: 13px;
+    color: c(brown);
+}

@@ -1,0 +1,65 @@
+%input {
+    border: transparent;
+    border-bottom: 1px solid c();
+    margin-bottom: s(3/2);
+    padding-left: s();
+    padding-bottom: 0;
+    font-family: f(sans);
+    font-size: 15px;
+    font-weight: 200;
+    color: c();
+    -webkit-appearance: none;
+    -moz-appereance: none;
+    appereance: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+      font-family: f(inputs);
+      font-size: 16px;
+      font-style: italic;
+      color: c();
+      text-transform: uppercase;
+
+      @include under(bag) {
+        font-size: 14px;
+      }
+
+      @include under(sm) {
+        font-size: 16px;
+      }
+    }
+  	&:-moz-placeholder {
+      font-family: f(inputs);
+      font-size: 16px;
+      font-style: italic;
+      color: c();
+      text-transform: uppercase;
+    }
+  	&::-moz-placeholder {
+      font-family: f(inputs);
+      font-size: 16px;
+      font-style: italic;
+      color: c();
+      text-transform: uppercase;
+    }
+  	&:-ms-input-placeholder {
+      font-family: f(inputs);
+      font-size: 16px;
+      font-style: italic;
+      color: c();
+      text-transform: uppercase;
+    }
+}
+
+%input-footer {
+    // @extend %input-type;
+    @include input-styling(c(base), c(light), 0, none, transparent, 0, 7px, 7px, 368px);
+    height: 23px;
+    font-family: f(sans);
+    font-size: 14px;
+  	font-weight: 200;
+  	text-align: center;
+}
