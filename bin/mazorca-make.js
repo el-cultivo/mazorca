@@ -17,7 +17,8 @@ process.argv.forEach(function (val, index, array) {
 		parsedCommand = val.split(':'),
 		parsedBaseAndFolder = parsedCommand[0].split('@'),
 		directory = mazorca_folders[parsedBaseAndFolder[0]],
-		filename = '_' + parsedCommand[1]+ '.scss',
+		classname = parsedCommand[1],
+		filename = '_' + classname + '.scss',
 		subfolder = parsedBaseAndFolder[1] ? parsedBaseAndFolder[1] : '', 
 		filepath, 
 		template;
@@ -32,8 +33,8 @@ process.argv.forEach(function (val, index, array) {
 		});
 		//set file
 		filepath = directory + subfolder + '/' + filename
-		if (parsedBaseAndFolder[0] === 'component') { template = '@mixin ' + filename + '() {}'}
-		else template = '.'+ filename +' {}' 
+		if (parsedBaseAndFolder[0] === 'component') { template = '@mixin ' + classname + '() {}'}
+		else template = '.'+ classname +' {}' 
 	}
 	else {
 		console.log('Comando desconocido: ' + val)
