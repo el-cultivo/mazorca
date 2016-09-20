@@ -7,6 +7,8 @@
  */
 
 var fs = require('fs')
+var path = require('path')
+
 process.argv.forEach(function (val, index, array) {
 	if (index < 2)  return
 	var mazorca_folders = {
@@ -18,7 +20,7 @@ process.argv.forEach(function (val, index, array) {
 		parsedBaseAndFolder = parsedCommand[0].split('@'),
 		directory = mazorca_folders[parsedBaseAndFolder[0]],
 		classname = parsedCommand[1],
-		filename = '_' + classname + '.scss',
+		filename = '_' + classname,
 		subfolder = parsedBaseAndFolder[1] ? parsedBaseAndFolder[1] : '', 
 		filepath, 
 		template;
@@ -32,7 +34,11 @@ process.argv.forEach(function (val, index, array) {
 			}
 		});
 		//set file
-		filepath = directory + subfolder + '/' + filename
+		filepath = path.format({
+			dir: directory + subfolder,
+			name: filename,
+			ext: 'scss'
+		});
 		if (parsedBaseAndFolder[0] === 'component') { template = '@mixin ' + classname + '() {}'}
 		else if (parsedBaseAndFolder[0] === 'element') { template = '% ' + classname + '{}'}
 		else template = '.'+ classname +' {}' 
