@@ -6,5 +6,5 @@ ncp('./node_modules/mazorca-core/core/mazorca-boilerplate/', './', function (err
  if (err) {
    return console.error(err);
  }
- console.log('done!');
+ console.log('mazorca has been installed!');
 });
