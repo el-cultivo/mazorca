@@ -34,6 +34,7 @@ process.argv.forEach(function (val, index, array) {
 		//set file
 		filepath = directory + subfolder + '/' + filename
 		if (parsedBaseAndFolder[0] === 'component') { template = '@mixin ' + classname + '() {}'}
+		else if (parsedBaseAndFolder[0] === 'element') { template = '% ' + classname + '{}'}
 		else template = '.'+ classname +' {}' 
 	}
 	else {
