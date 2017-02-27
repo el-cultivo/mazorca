@@ -1,34 +1,121 @@
 {
-  "name": "mazorca-core",
-  "version": "1.1.0",
-  "description": "Scss Framework of El Cultivo",
-  "main": "./",
-  "directories": {
-    "docs": "docs"
+  "_args": [
+    [
+      {
+        "raw": "mazorca-core@^1.2.1",
+        "scope": null,
+        "escapedName": "mazorca-core",
+        "name": "mazorca-core",
+        "rawSpec": "^1.2.1",
+        "spec": ">=1.2.1 <2.0.0",
+        "type": "range"
+      },
+      "/Users/user/code/bestbuddies/resources/assets/sass"
+    ],
+    [
+      {
+        "raw": "mazorca-core@^1.*",
+        "scope": null,
+        "escapedName": "mazorca-core",
+        "name": "mazorca-core",
+        "rawSpec": "^1.*",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "/Users/user/code/nice-to-have/resources/assets/sass"
+    ],
+    [
+      {
+        "raw": "mazorca-core@^1.2.1",
+        "scope": null,
+        "escapedName": "mazorca-core",
+        "name": "mazorca-core",
+        "rawSpec": "^1.2.1",
+        "spec": ">=1.2.1 <2.0.0",
+        "type": "range"
+      },
+      "/Users/user/wp/atla/wp-content/themes/atla-theme/sass"
+    ],
+    [
+      "mazorca-core@^1.*",
+      "/home/flor/Code/nice-to-have/resources/assets/sass"
+    ]
+  ],
+  "_from": "mazorca-core@>=1.0.0 <2.0.0",
+  "_id": "mazorca-core@1.2.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mazorca-core",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/mazorca-core-1.2.5.tgz_1482772572729_0.14975081221200526"
+  },
+  "_npmUser": {
+    "email": "diego@third28.com",
+    "name": "diegovdc"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "mazorca-core",
+    "raw": "mazorca-core@^1.*",
+    "rawSpec": "^1.*",
+    "scope": null,
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shrinkwrap": null,
+  "_spec": "mazorca-core@^1.*",
+  "_where": "/home/flor/Code/nice-to-have/resources/assets/sass",
+  "author": {
+    "name": "Diego Villaseñor"
+  },
+  "bin": {
+    "mazorca": "bin/mazorca.js"
+  },
+  "bugs": {
+    "url": "https://github.com/diegovdc/mazorca/issues"
   },
   "dependencies": {
     "ncp": "^2.0.0"
   },
+  "description": "Scss Framework of El Cultivo",
   "devDependencies": {
     "mv": "^2.1.1"
   },
-  "bin": {
-    "mazorcamake": "bin/mazorca-make.js",
-    "mazorcainstall": "bin/mazorca-install.js"
+  "directories": {
+    "docs": "docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diegovdc/mazorca.git"
+  "dist": {
+    "shasum": "c52dc4f315415a9382341130c79905f6669e05d6",
+    "tarball": "https://registry.npmjs.org/mazorca-core/-/mazorca-core-1.2.5.tgz"
   },
+  "gitHead": "098a319266f3a5f993331c6b89beec4edc9d4b7d",
+  "homepage": "https://github.com/diegovdc/mazorca#readme",
   "keywords": [
     "SCSS",
     "framework",
     "mixins"
   ],
-  "author": "Diego Villaseñor",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/diegovdc/mazorca/issues"
+  "main": "./",
+  "maintainers": [
+    {
+      "name": "diegovdc",
+      "email": "diego@third28.com"
+    }
+  ],
+  "name": "mazorca-core",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegovdc/mazorca.git"
   },
-  "homepage": "https://github.com/diegovdc/mazorca#readme"
+  "scripts": {},
+  "version": "1.2.5"
 }

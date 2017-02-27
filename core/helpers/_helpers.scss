@@ -37,14 +37,17 @@
 }
 
 .flip {
-	-moz-transform:rotate(180deg) !important;
-   -o-transform: rotate(180deg) !important;
-   -webkit-transform: rotate(180deg) !important;
-   transform: rotate(180deg) !important;
+	-moz-transform: rotate(180deg) translateX(-50%) !important;
+	-o-transform: rotate(180deg) translateX(-50%) !important;
+	-webkit-transform: rotate(180deg) translateX(-50%) !important;
+	transform: rotate(180deg) translateX(-50%) !important;
 }
 
 .centerXY {	@include center('xy');}
 
+.text-center {text-align: center !important;}
+
+.flex 			{ display: flex !important;}
 .left 			{ float:left !important;}
 .right 			{ float:right !important;}
 // .top 			{ top:0 !important;}
@@ -52,6 +55,18 @@
 .ontop 			{ z-index:99 !important;}
 .z-0 			{ z-index: 0 !important;}
 
+
+.w100 			{ width: 100% !important;}
+.h100 			{ height: 100% !important;}
+
+.op1			{ opacity: 1 !important;}
+.tdn 			{ text-decoration: none !important;}
+
+.text-overflow-ellipsis {
+	text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
 /*************************** Layout ***************************/
 .clearfix {@include clearfix;}
 
@@ -71,11 +86,12 @@
 
 /*************************** Paddings and Margins ***************************/
 .p0 			{ padding: 0 !important;}
+.pb0			{padding-bottom: 0 !important;}
 .pr0 			{ padding-right: 0 !important;}
 .pl0 			{ padding-left: 0 !important;}
 .m0 			{ margin:0 !important;}
 .mb0			{ margin-bottom: 0 !important;}
-.m50			{ margin-bottom: 50px !important;}
+.mb40			{ margin-bottom: 40px !important;}
 
 
 /*************************** Arrows ***************************/
@@ -85,7 +101,7 @@
 /*************************** Drags, Selects ***************************/
 %undraggable,
 .undraggable-unselectable {//unselectable needs to be present so that undraggable works properly
-	user-drag: none !important; 
+	user-drag: none !important;
 	-webkit-user-drag: none !important;
 	user-select: none !important;
 	-moz-user-select: none !important;
@@ -106,11 +122,18 @@
 	}
 }
 
+/*************************** Text ***************************/
+.ttu {text-transform: uppercase !important;}
+.ttn {text-transform: none !important;}
 
 /*************************** Animations ***************************/
 .transition-fast {transition: all 0.3s}
-.transition-slow {transition: all 0.7s}
+.transition-slow {transition: all 1s}
 .hover-scale-up {&:hover { transform: scale(1.2) !important;}}
 
 /*************************** JS Classes ***************************/
-.noScroll_JS 	{ overflow:hidden !important;} //add on body through JS to prevent scrolling when using a full hright fixed overlay
+[v-cloak] {opacity: 0}
+.noScroll_JS, .no-scroll 	{ overflow:hidden !important;} //add on body through JS to prevent scrolling when using a full hright fixed overlay
+
+/*************************** Bootstrap ***************************/
+.hidden { display: none !important;} //no cargaba archivo responsive-utilities.less 
