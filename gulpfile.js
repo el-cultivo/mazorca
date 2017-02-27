@@ -25,7 +25,7 @@ var sassdocOptions = {
   package: {
     title: 'Mazorca',
     name: 'Mazorca',
-    version: '1.0.0',
+    version: '1.3.0',
     license: 'GNU',
     homepage: 'github.com/el-cultivo/mazorca',
     description: 'Scss Framework'
@@ -48,7 +48,7 @@ gulp.task('sass', function(){
 
 gulp.task('sassdoc', function () {
   return gulp
-    .src(main_scss_path + './**/*.scss')
+    .src(main_scss_path + './core/**/*.scss')
     .pipe(sassdoc(sassdocOptions))
     .resume();
 });
