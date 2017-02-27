@@ -4,3 +4,7 @@ $ cat .gitignore
 /vendor/
 compiled.css
 compiled.css.map
+/.sass-cache/
+/config/
+/front/
+dev-package.json

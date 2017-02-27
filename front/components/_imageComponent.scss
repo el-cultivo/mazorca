@@ -1,8 +1,0 @@
-@mixin boxComponent {
-	&__box {
-		@extend %grid-box;
-		&--sm {
-			@extend %grid-box--sm;
-		}
-	}
-}
