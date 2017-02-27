@@ -1,46 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "mazorca-core@^1.2.1",
-        "scope": null,
-        "escapedName": "mazorca-core",
-        "name": "mazorca-core",
-        "rawSpec": "^1.2.1",
-        "spec": ">=1.2.1 <2.0.0",
-        "type": "range"
-      },
-      "/Users/user/code/bestbuddies/resources/assets/sass"
-    ],
-    [
-      {
-        "raw": "mazorca-core@^1.*",
-        "scope": null,
-        "escapedName": "mazorca-core",
-        "name": "mazorca-core",
-        "rawSpec": "^1.*",
-        "spec": ">=1.0.0 <2.0.0",
-        "type": "range"
-      },
-      "/Users/user/code/nice-to-have/resources/assets/sass"
-    ],
-    [
-      {
-        "raw": "mazorca-core@^1.2.1",
-        "scope": null,
-        "escapedName": "mazorca-core",
-        "name": "mazorca-core",
-        "rawSpec": "^1.2.1",
-        "spec": ">=1.2.1 <2.0.0",
-        "type": "range"
-      },
-      "/Users/user/wp/atla/wp-content/themes/atla-theme/sass"
-    ],
-    [
-      "mazorca-core@^1.*",
-      "/home/flor/Code/nice-to-have/resources/assets/sass"
-    ]
-  ],
   "_from": "mazorca-core@>=1.0.0 <2.0.0",
   "_id": "mazorca-core@1.2.5",
   "_inCache": true,
