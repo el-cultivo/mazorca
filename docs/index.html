@@ -33,10 +33,10 @@
     $obj: ();
     @each $key, $value in nth($maps, $i+1) {
       $value: strip-unit($value);
-      $elem: &#39;&quot;#{$key}&quot; : &quot;#{$value}&quot;&#39;;
+      $elem: &#39; &quot;#{$key}&quot; : &quot;#{$value}&quot; &#39;;
       $data: append($data, $elem, comma);
     }
-    $obj : &#39;&quot;#{nth($map_names, $i+1)}&quot;: {#{$data}}&#39;;
+    $obj : &#39; &quot;#{nth($map_names, $i+1)}&quot;: {#{$data}}&#39;;
     $json: append($json, $obj, comma);
     $i: $i + 1;
   }

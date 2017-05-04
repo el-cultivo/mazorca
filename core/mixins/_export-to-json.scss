@@ -14,10 +14,10 @@
     $obj: ();
     @each $key, $value in nth($maps, $i+1) {
       $value: strip-unit($value);
-      $elem: '"#{$key}" : "#{$value}"';
+      $elem: ' "#{$key}" : "#{$value}" ';
       $data: append($data, $elem, comma);
     }
-    $obj : '"#{nth($map_names, $i+1)}": {#{$data}}';
+    $obj : ' "#{nth($map_names, $i+1)}": {#{$data}}';
     $json: append($json, $obj, comma);
     $i: $i + 1;
   }

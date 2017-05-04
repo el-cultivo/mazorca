@@ -9,4 +9,5 @@ compiled.css.map
 gulpfile.js
 !core/mazorca-boilerplate/mazorca.scss
 !_mazorca-core.scss
-dev-npm package.json
+dev-npm 
+package.json
