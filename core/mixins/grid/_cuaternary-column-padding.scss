@@ -38,10 +38,14 @@
             padding-right: gutter-calculator($gutter, outer);
         }
 
-        &:nth-of-type(4n-2),
+        &:nth-of-type(4n-2) {
+            padding-right: gutter-calculator($gutter, central);
+            padding-left: gutter-calculator($gutter, inner);
+        }
+
         &:nth-of-type(4n-1) {
             padding-right: gutter-calculator($gutter, inner);
-            padding-left: gutter-calculator($gutter, inner);
+            padding-left: gutter-calculator($gutter, central);
         }
 
         &:nth-of-type(4n) {
