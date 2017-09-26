@@ -4,13 +4,8 @@ $pads: (
 	pb: $base-px,
 	pl: $base-px,
 	pr: $base-px,
-	xs: 7px,
-	sm: 16px,
-	md: 18px,
 	gutter: 50px,
-	body: 34px,
-	header: 161px
-	);
+);
 
 $margs: (
 	m: $base-px,
@@ -18,18 +13,15 @@ $margs: (
 	mb: $base-px,
 	ml: $base-px,
 	mr: $base-px,
-	);
+);
 
 $lh : (
 	base: 1.2,
-	sm: 15px,
-	md: 20px,
-	lg: 40px
-	);
+);
 
 $mb: (
 	base: $base-px
-	);
+);
 
 $spacings: (mb: $mb, pads:$pads, margs:$margs, lh: $lh);
 
@@ -55,6 +47,3 @@ $spacings: (mb: $mb, pads:$pads, margs:$margs, lh: $lh);
 		@return map-get($mb, $spacing);
 	}
 }
-// Bootstrap
-//Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         s(2);
