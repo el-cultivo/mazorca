@@ -14,41 +14,51 @@
 /// @since 0.0.1
 ///
 
-@mixin cuaternary-column-padding($gutter:0, $reset: false) {
+@mixin pentary-column-padding($gutter:0, $reset: false) {
     @if ($reset) {
-        &:nth-of-type(4n-3) {
+        &:nth-of-type(5n-4) {
             padding-right: 0;
         }
 
-        &:nth-of-type(4n-2) {
+        &:nth-of-type(5n-3) {
             padding-left: 0;
             padding-right: 0;
         }
 
-        &:nth-of-type(4n-1) {
+        &:nth-of-type(5n-2) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &:nth-of-type(5n-1) {
             padding-right: 0;
             padding-left: 0;
         }
 
-        &:nth-of-type(4n) {
+        &:nth-of-type(5n) {
             padding-left: 0;
         }
     } @else {
-        &:nth-of-type(4n-3) {
+        &:nth-of-type(5n-4) {
             padding-right: gutter-calculator($gutter, outer);
         }
 
-        &:nth-of-type(4n-2) {
+        &:nth-of-type(5n-3) {
             padding-right: gutter-calculator($gutter, inner);
             padding-left: gutter-calculator($gutter, inner);
         }
 
-        &:nth-of-type(4n-1) {
+        &:nth-of-type(5n-2) {
             padding-right: gutter-calculator($gutter, inner);
             padding-left: gutter-calculator($gutter, inner);
         }
 
-        &:nth-of-type(4n) {
+        &:nth-of-type(5n-1) {
+            padding-right: gutter-calculator($gutter, inner);
+            padding-left: gutter-calculator($gutter, inner);
+        }
+
+        &:nth-of-type(5n) {
             padding-left: gutter-calculator($gutter, outer);
         }
     }
