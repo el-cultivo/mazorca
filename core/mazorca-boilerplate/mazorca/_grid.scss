@@ -1,28 +1,22 @@
 /*_________________________ Grid _________________________ */
 .grid {
-	$gutter: s(1, gutter);
-	$gutter-sm: s(1, gutter-sm);
+	$gutter: 20px;
+	$gutter-sm: 20px;
 
 	&__row {
 		position:relative;
 		width: 100%;
 		min-height: 1px;
 	}
-	&__container--no-pad,
-	&__container--banner,
 	&__container {
 		position:relative;
-		padding: 0 $gutter;
 		display: flex;
 		flex-wrap: wrap;
+		padding: 0 $gutter;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $container-max-width;
 		width: 100%;
-		&--no-pad,
-		&--banner {
-			padding: 0;
-		}
 	}
 	&__col {
 
@@ -35,138 +29,21 @@
 			width: 100%;
 		}
 		&-1-2 {
-			flex-basis: 50%;
-			&:nth-of-type(odd) {
-				padding-right: $gutter;
-			}
-			&:nth-of-type(even) {
-				padding-left: $gutter;
-			}
-			@include under(sm) {
-				flex-basis: 100%;
-				min-width: 100%;
-				&:nth-of-type(odd) {
-					padding-right: 0;
-				}
-				&:nth-of-type(even) {
-					padding-left: 0;
-				}
-				&--contain-fixed {
-					order: -1;
-				}
-			}
-			&--form {
-				&:nth-of-type(odd) {
-					padding-right: $gutter*2;
-				}
-				&:nth-of-type(even) {
-					padding-left: $gutter*2;
-				}
-
-				@include under(md) {
-					&:nth-of-type(odd) {
-						padding-right: $gutter;
-					}
-					&:nth-of-type(even) {
-						padding-left: $gutter;
-					}
-				}
-
-				@include under(sm) {
-					&:nth-of-type(odd) {
-						padding-right: 0;
-					}
-					&:nth-of-type(even) {
-						padding-left: 0;
-					}
-				}
-			}
-
-			&--collection {
-				&:nth-of-type(odd) {
-					padding-left: $gutter*2;
-				}
-				&:nth-of-type(even) {
-					padding-right: $gutter*2;
-				}
-
-				@include under(md) {
-					&:nth-of-type(odd) {
-						padding-left: $gutter;
-					}
-					&:nth-of-type(even) {
-						padding-right: $gutter;
-					}
-				}
-
-				@include under(sm) {
-					&:nth-of-type(odd) {
-						padding-left: 0;
-					}
-					&:nth-of-type(even) {
-						padding-right: 0;
-					}
-				}
-			}
+			@include binary-column-maker($gutter:$gutter)
 		}
 
 		&-1-3{
-			width: 33.33333%;
-			@include over(sm) {
-				&:nth-of-type(3n-2) {
-					padding-right: $gutter + 16.666666px;
-				}
-				&:nth-of-type(3n-1) {
-					padding-right: $gutter - 16.666666px;
-					padding-left: $gutter - 16.666666px;
-				}
-				&:nth-of-type(3n) {
-					padding-left: $gutter + 16.666666px;
-				}
-			}
+			@include ternary-column-maker($gutter:$gutter)
+		}		
 
-			@include under(sm) {
-				width: 50%;
-				&:nth-of-type(odd) {
-					padding-right: $gutter-sm;
-				}
-				&:nth-of-type(even) {
-					padding-left: $gutter-sm;
-				}
-			}
-
-
-			@include under(xs) {
-				width: 100%;
-				&:nth-of-type(odd) {
-					padding-right: 0;
-				}
-				&:nth-of-type(even) {
-					padding-left: 0;
-				}
-			}
+		&-1-4{
+			@include cuaternary-column-maker($gutter:$gutter)
 		}
 	}
 
 	&__box {
 		position:relative;
 		width: 100%;
-	}
-
-	&__fixedElem {
-		height: 200vh;//damos una altura que funcione sin problemas
-		position: absolute;
-		&.active {
-		    height: 100%;
-		  	position: fixed;
-		  	overflow-y: scroll;
-		  	top: 80px;
-		}
-	  	@include under(sm) {
-	  		height: auto;
-	  		position: relative;
-	  		top: 0;
-	  	}
 	}
 }
 
