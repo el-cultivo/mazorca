@@ -1,5 +1,5 @@
 # mazorca-core 
-`version 1.3.3`
+`version 1.5.2`
 
 Framework de SCSS utilizado por El Cultivo
 
