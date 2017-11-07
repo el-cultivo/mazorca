@@ -43,7 +43,6 @@
     	src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype');
 		src: url('#{$font-filename}.woff') format('woff');
         src: url('#{$font-filename}.ttf') format('truetype');
-        src: url('#{$font-filename}.svg##{$font-filename}') format('svg');
 		font-weight: $font-weight;
 		font-style: $font-style;
 		font-stretch: $font-stretch;
