@@ -25,7 +25,7 @@ var sassdocOptions = {
   package: {
     title: 'Mazorca',
     name: 'Mazorca',
-    version: '1.3.0',
+    version: '1.5.3',
     license: 'GNU',
     homepage: 'github.com/el-cultivo/mazorca',
     description: 'Scss Framework'
