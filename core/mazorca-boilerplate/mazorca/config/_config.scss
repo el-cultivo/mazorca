@@ -17,19 +17,7 @@
 @import "_fonts";//
 @import "_pads-n-margs";//
 @import "_inputs";// Form Inputs
-
-
-$z: (
-	base: 0,
-	menuMain:99999
-	);
-
-
-@function z($z-index: base) {
-	@if map-has-key($z, $z-index) {
-		@return map-get($z, $z-index);
-	}
-}
+@import "_z-index";
 
 // Map to hold whatever maps of the theme and framework that might need to be accessed somehow, or printed into the console (for easy consultation) via the maps() mixin. It takes a key:value pair, where key is the name of the map and the value is the corresponding map.
 /// @example $maps:(breaks:$breaks, colors:$colors);
